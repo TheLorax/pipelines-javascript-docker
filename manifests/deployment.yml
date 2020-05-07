@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: theloraxpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: theloraxpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: theloraxpipelinesjavascriptdocker 
+          image: keithpipelinetest.azurecr.io/theloraxpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
